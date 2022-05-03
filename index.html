@@ -67,67 +67,70 @@
                     <!-- Form tag indicates to html that this is a field user input is taken-->
                     <form class="bg-dark">
                         <p>Filter Search</p>
+
+                        <!-- list-group class applies a bootstrap styling: Creating a set of list tags, nested within an unordered list tag-->
+                        <ul class="list-group bg-dark">
+                            
+                            <!-- Creates the label to indicate where and what to input for filter (DATE) -->
+                            <li class="list-group-item bg-dark">
+                                <!-- 'for="date"' represents a caption for the date item-->
+                                <label for="date">Enter Date</label>
+                                <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
+                                <input type="text" placeholder="1/10/2010" id="datetime" />
+                            </li>           
+
+                            <!-- Creates the label to indicate where and what to input for filter (CITY) -->
+                            <li class="list-group-item bg-dark">
+                                <!-- 'for="city"' represents a caption for the city item-->
+                                <label for="city">Enter City</label>
+                                <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
+                                <input type="text" placeholder="San Diego" id="city" />
+                            </li>           
+
+                            <!-- Creates the label to indicate where and what to input for filter (STATE) -->
+                            <li class="list-group-item bg-dark">
+                                <!-- 'for="state"' represents a caption for the state item-->
+                                <label for="state">Enter State</label>
+                                <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
+                                <input type="text" placeholder="CA" id="state" />
+                            </li>    
+
+                            <!-- Creates the label to indicate where and what to input for filter (COUNTRY) -->
+                            <li class="list-group-item bg-dark">
+                                <!-- 'for="country"' represents a caption for the country item-->
+                                <label for="country">Enter Country</label>
+                                <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
+                                <input type="text" placeholder="US" id="country" />
+                            </li>  
+
+                            <!-- Creates the label to indicate where and what to input for filter (SHAPE) -->
+                            <li class="list-group-item bg-dark">
+                                <!-- 'for="shape"' represents a caption for the shape item-->
+                                <label for="shape">Enter Shape</label>
+                                <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
+                                <input type="text" placeholder="Circle" id="shape" />
+                            </li> 
+                            
+                            <!-- Creates button to execute the Reset -->
+                            <!-- reset type - defines a reset button that will reset all of the form values to their default setting -->
+                            <!-- id reset-btn is what the js will look for. when this button pressed, will run handleReset function in the js -->
+                            <input type="reset" value="Reset Filter" id="reset-btn" class="btn btn-default">
+                            
+                            <!-- GOT RID OF THE BUTTONS 
+                            /// Creates button to execute the filter
+                            <li class="list-group-item bg-dark">
+                                /// class adds some bootstrap styling, the id is what the js will look for when executed, name for button
+                                <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                            </li>
+                            
+                            /// Creates button to execute the Reset
+                            <li class="list-group-item bg-dark">
+                                /// class adds some bootstrap styling, the id is what the js will look for when executed, name for button
+                                <button id="reset-btn" type="button" class="btn btn-default">Reset Table</button>
+                            </li>
+                            -->
+                        
                     </form>
-
-                    <!-- list-group class applies a bootstrap styling: Creating a set of list tags, nested within an unordered list tag-->
-                    <ul class="list-group bg-dark">
-                        
-                        <!-- Creates the label to indicate where and what to input for filter (DATE) -->
-                        <li class="list-group-item bg-dark">
-                            <!-- 'for="date"' represents a caption for the date item-->
-                            <label for="date">Enter Date</label>
-                            <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
-                            <input type="text" placeholder="1/10/2010" id="datetime" />
-                        </li>           
-
-                        <!-- Creates the label to indicate where and what to input for filter (CITY) -->
-                        <li class="list-group-item bg-dark">
-                            <!-- 'for="city"' represents a caption for the city item-->
-                            <label for="city">Enter City</label>
-                            <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
-                            <input type="text" placeholder="San Diego" id="city" />
-                        </li>           
-
-                        <!-- Creates the label to indicate where and what to input for filter (STATE) -->
-                        <li class="list-group-item bg-dark">
-                            <!-- 'for="state"' represents a caption for the state item-->
-                            <label for="state">Enter State</label>
-                            <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
-                            <input type="text" placeholder="CA" id="state" />
-                        </li>    
-
-                        <!-- Creates the label to indicate where and what to input for filter (COUNTRY) -->
-                        <li class="list-group-item bg-dark">
-                            <!-- 'for="country"' represents a caption for the country item-->
-                            <label for="country">Enter Country</label>
-                            <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
-                            <input type="text" placeholder="US" id="country" />
-                        </li>  
-
-                        <!-- Creates the label to indicate where and what to input for filter (SHAPE) -->
-                        <li class="list-group-item bg-dark">
-                            <!-- 'for="shape"' represents a caption for the shape item-->
-                            <label for="shape">Enter Shape</label>
-                            <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
-                            <input type="text" placeholder="Circle" id="shape" />
-                        </li> 
-                        
-                        <!-- GOT RID OF THE BUTTONS 
-                        /// Creates button to execute the filter
-                        <li class="list-group-item bg-dark">
-                            /// class adds some bootstrap styling, the id is what the js will look for when executed, name for button
-                            <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
-                        </li>
-                        
-                        /// Creates button to execute the Reset
-                        <li class="list-group-item bg-dark">
-                            /// class adds some bootstrap styling, the id is what the js will look for when executed, name for button
-                            <button id="reset-btn" type="button" class="btn btn-default">Reset Table</button>
-                        </li>
-                        -->
-
-
-
 
                     </ul>
                 </div>
