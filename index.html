@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFO Finder</title>
+    
+    <!-- Adding link to bootstrap's content delivery networkd (CDN)/ and to the stylesheet we created (style.css) -->
+    <link  
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<!-- appplies dark background-->
+<body class="bg-dark">
+    <!-- wrapper class adds extra functionality to bootstrap/ helps group the elements and specifies the styling in our stylesheet-->
+    <div class="wrapper">
+
+        <!-- 'navbar' is a specific class to bootstrap's built-in styling where we pass extra characteristics to it-->
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <!-- When the navbar is clicked, it will reset the webpage after the filters have been added - thus us linking the homepage/ class is for stlying-->
+            <a class="navbar-brand" href="index.html">UFO Sightings</a>
+        </nav>
+
+        <!-- Adding a jumbotron styling header -->
+        <div class="jumbotron">
+            <h1 class="display-4">The Truth Is Out There</h1>
+        </div>
+
+        <!-- Adding the article title and paragraph, the class ensures all elements added will span the width of the view port-->
+        <div class="container-fluid">
+            <!-- Makes sure that the elements (title and paragraph) will align neatly along the page in one row-->
+            <div class="row">
+                <!-- Within the row, we are splitting the 12 columns into two sections/ (4) title, (8) paragraph-->
+                <div class="col-md-4">
+                    <h3>UFO Sightings: Fact or Fancy? <small>Ufologists Weigh In</small></h3>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        Are we alone in the universe? For millennia, humans have turned to the sky to answer this question. Now, thanks to research generously funded by W. Avy, a UFO-enthusiast and amateur ufologist, we can supplement our sky-searching with data analysis.
+                        <!-- Adding space in between paragraphs-->
+                        <br> <br>
+                        
+                        "The release of this analysis is well-timed: It coincides with the celebration of World UFO Day, which is a moment for ufologists around the world to connect, relax, and sample a range of UFO-themed snacks," said Dr. Ursula F. Olivier, the world's preeminent expert on circular sightings. "Citizen-scientists can be especially helpful in both cataloguing sightings—which is hugely helpful for us in our search for aliens—and in helping us celebrate the work that has already been done, such as this data visualization project, which will help us raise awareness of the ubiquity of sightings!"
+
+                        Not everyone is ready to celebrate, however. Local CEO and vocal anti-alien activist V. Isualize reached out to our reporters to go on record as firmly opposed to any attempts to provide access to this data. "If there are aliens, they certainly would like to be left alone," she stated, before directing us to the Leave Aliens Alone (LAA) community engagement initiative she founded and funds.
+
+                        o what do YOU think? Are we alone in the universe? Are aliens trying to contact us, or do they want to be left alone? Dig through the data yourself, and let us know what you see
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contains the next row with the section for the filter and table of sigtings data-->
+        <div class="container-fluid">
+            <!-- Makes sure that the elements (fitler and table) will align neatly along the page in one row-->
+            <div class="row">
+                
+                <!-- Within the row, we are splitting the 12 columns into two sections/ (3) filter, (9) table-->
+                <div class="col-md-3">
+                    
+                    <!-- Form tag indicates to html that this is a field user input is taken-->
+                    <form class="bg-dark">
+                        <p>Filter Search</p>
+                    </form>
+
+                    <!-- list-group class applies a bootstrap styling: Creating a set of list tags, nested within an unordered list tag-->
+                    <ul class="list-group bg-dark">
+                        
+                        <!-- Creates the label to indicate where and what to input for filter (DATE) -->
+                        <li class="list-group-item bg-dark">
+                            <!-- 'for="date"' represents a caption for the date item-->
+                            <label for="date">Enter Date</label>
+                            <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
+                            <input type="text" placeholder="1/10/2010" id="datetime" />
+                        </li>           
+
+                        <!-- Creates the label to indicate where and what to input for filter (CITY) -->
+                        <li class="list-group-item bg-dark">
+                            <!-- 'for="city"' represents a caption for the city item-->
+                            <label for="city">Enter City</label>
+                            <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
+                            <input type="text" placeholder="San Diego" id="city" />
+                        </li>           
+
+                        <!-- Creates the label to indicate where and what to input for filter (STATE) -->
+                        <li class="list-group-item bg-dark">
+                            <!-- 'for="state"' represents a caption for the state item-->
+                            <label for="state">Enter State</label>
+                            <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
+                            <input type="text" placeholder="CA" id="state" />
+                        </li>    
+
+                        <!-- Creates the label to indicate where and what to input for filter (COUNTRY) -->
+                        <li class="list-group-item bg-dark">
+                            <!-- 'for="country"' represents a caption for the country item-->
+                            <label for="country">Enter Country</label>
+                            <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
+                            <input type="text" placeholder="US" id="country" />
+                        </li>  
+
+                        <!-- Creates the label to indicate where and what to input for filter (SHAPE) -->
+                        <li class="list-group-item bg-dark">
+                            <!-- 'for="shape"' represents a caption for the shape item-->
+                            <label for="shape">Enter Shape</label>
+                            <!-- type='text' will look for text to be input, place holder is example text, id is what the .js will look for when the button is clicked-->
+                            <input type="text" placeholder="Circle" id="shape" />
+                        </li> 
+                        
+                        <!-- GOT RID OF THE BUTTONS 
+                        /// Creates button to execute the filter
+                        <li class="list-group-item bg-dark">
+                            /// class adds some bootstrap styling, the id is what the js will look for when executed, name for button
+                            <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                        </li>
+                        
+                        /// Creates button to execute the Reset
+                        <li class="list-group-item bg-dark">
+                            /// class adds some bootstrap styling, the id is what the js will look for when executed, name for button
+                            <button id="reset-btn" type="button" class="btn btn-default">Reset Table</button>
+                        </li>
+                        -->
+
+
+
+
+                    </ul>
+                </div>
+
+                <!-- Table for data-->
+                <div class="col-md-9">
+                    <table class="table table-striped bg-dark">
+                        <thead>
+                            <!-- <tr> tag signifies that everything nested within it will be displayed as a row of data -->
+                            <tr>
+                                <!-- Data headers/ column names / (KVPs): same key but different values for each date-->
+                                <th>Date</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Country</th>
+                                <th>Shape</th>
+                                <th>Duration</th>
+                                <th>Comments</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>   
+
+    <!-- Adding links to our scripts + D3.js, which allows the library to listen and react to the user input-->
+    <div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+        <script src="static/js/data.js"></script>
+        <script src="static/js/app.js"></script>
+    </div>
+</body>
+</html>
