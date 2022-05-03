@@ -11,3 +11,16 @@ Visiting the webpage, we are first welcomed with information regarding UFO sight
 
 ## Summary
 In summary, this is a webpage that contains a table of multiple entries on UFO sightings. There is a section in which we can filter the data based on specific parameters. A recommendation for further development of the webpage is to maybe add more data entries to the dataset. The filter system of the data can be improved on to be more user friendly (EX: have it so that different formatting of dates can work rather than what is specified). At last, maybe add a function to reset the filter and bring back the full dataset.
+
+
+## Revisit
+Added a reset filter functionality. When the button is pressed, it will reset the table back to its full dataset and clear all the text within the user input forms.
+<br><br>
+<table>
+  <tr>
+    <td> Before Reset </td>
+    <td> After Reset </td>
+  <tr>
+    <td><img src = "Resources/before_reset.png" width = "75%" height = "75%" ></td>
+    <td><img src = "Resources/after_reset.png" width = "75%" height = "75%" ></td>
+</table>
